@@ -15,20 +15,14 @@ for sdk_target in MMSPlugin.sdk_targets:
   binary.compiler.cxxincludes += [
     os.path.join(builder.sourcePath, 'include'),
     os.path.join(builder.sourcePath, '..', 'SchemaEntity'),
-    os.path.join(builder.sourcePath, 'funchook', 'include'),
   ]
-
-  # Link funchook libraries
-  if binary.compiler.target.platform == 'linux':
-    binary.compiler.postlink += [
-      os.path.join(builder.sourcePath, 'funchook', 'lib', 'libfunchook.a'),
-      os.path.join(builder.sourcePath, 'funchook', 'lib', 'libdistorm.a'),
-    ]
 
   binary.sources += [
     'VacAllow.cpp',
     os.path.join('..', 'SchemaEntity', 'schemasystem.cpp'),
-    os.path.join('..', 'SchemaEntity', 'module.cpp'),
+    os.path.join(sdk['path'], 'common', 'netmessages.pb.cc'),
+    os.path.join(sdk['path'], 'common', 'networkbasetypes.pb.cc'),
+    os.path.join(sdk['path'], 'common', 'connectionless_netmessages.pb.cc'),
   ]
 
   if cxx.target.arch == 'x86':

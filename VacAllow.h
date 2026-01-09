@@ -15,7 +15,6 @@
 #include <KeyValues.h>
 #include "CCSPlayerController.h"
 #include "include/menus.h"
-#include <module.h>
 
 class VacAllow final : public ISmmPlugin, public IMetamodListener
 {
