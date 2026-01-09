@@ -1,3 +1,6 @@
+![GitHub all releases](https://img.shields.io/github/downloads/ABKAM2023/cs2-vacallow/total?style=for-the-badge)
+
+
 ## RU
 **VacAllow** - плагин пропускает игроков с VAC-блокировкой, даже когда VAC включён.
 
